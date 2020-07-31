@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Action_Add" xml:space="preserve">
+    <value>{0}を追加</value>
+  </data>
+  <data name="Action_Close" xml:space="preserve">
+    <value>{0}を閉じる</value>
+  </data>
+  <data name="Action_CreateTemplate" xml:space="preserve">
+    <value>テンプレートの作成</value>
+  </data>
+  <data name="Action_Delete" xml:space="preserve">
+    <value>{0}を削除</value>
+  </data>
+  <data name="Action_Insert" xml:space="preserve">
+    <value>{0}を挿入</value>
+  </data>
+  <data name="Action_LockDate" xml:space="preserve">
+    <value>日付の固定</value>
+  </data>
+  <data name="Action_New" xml:space="preserve">
+    <value>新規{0}</value>
+  </data>
+  <data name="Action_Save" xml:space="preserve">
+    <value>{0}を保存しますか</value>
+  </data>
+  <data name="Action_SaveAs" xml:space="preserve">
+    <value>名前を付けて保存</value>
+  </data>
+  <data name="Action_ScheduleWorkout" xml:space="preserve">
+    <value>ワークアウトのスケジュールを作成</value>
+  </data>
+  <data name="Action_Show" xml:space="preserve">
+    <value>{0}を表示</value>
+  </data>
+  <data name="Action_UnlockDate" xml:space="preserve">
+    <value>日付の固定を解除</value>
+  </data>
+  <data name="Label_Activities" xml:space="preserve">
+    <value>アクティビティ</value>
+  </data>
+  <data name="Label_ATL" xml:space="preserve">
+    <value>ATL</value>
+  </data>
+  <data name="Label_AthletesTrainingPlan" xml:space="preserve">
+    <value>{0}のトレーニングプラン</value>
+  </data>
+  <data name="Label_CTL" xml:space="preserve">
+    <value>CTL</value>
+  </data>
+  <data name="Label_CTLtarget" xml:space="preserve">
+    <value>CTL目標</value>
+  </data>
+  <data name="Label_Cumulative" xml:space="preserve">
+    <value>累積</value>
+  </data>
+  <data name="Label_DailyAvg" xml:space="preserve">
+    <value>日平均</value>
+  </data>
+  <data name="Label_Details" xml:space="preserve">
+    <value>詳細</value>
+  </data>
+  <data name="Label_DragTemplate" xml:space="preserve">
+    <value>テンプレートをドラッグ</value>
+  </data>
+  <data name="Label_Duration" xml:space="preserve">
+    <value>期間</value>
+  </data>
+  <data name="Label_EmptyFolders" xml:space="preserve">
+    <value>空のフォルダ</value>
+  </data>
+  <data name="Label_End" xml:space="preserve">
+    <value>終了</value>
+  </data>
+  <data name="Label_FitPlan" xml:space="preserve">
+    <value>FitPlan</value>
+  </data>
+  <data name="Label_Multiple" xml:space="preserve">
+    <value>複数</value>
+  </data>
+  <data name="Label_Phase" xml:space="preserve">
+    <value>トレーニング期</value>
+  </data>
+  <data name="Label_Phases" xml:space="preserve">
+    <value>トレーニング期</value>
+  </data>
+  <data name="Label_PhaseTotal" xml:space="preserve">
+    <value>トレーニング期計</value>
+  </data>
+  <data name="Label_Plan" xml:space="preserve">
+    <value>プラン</value>
+  </data>
+  <data name="Label_Planning" xml:space="preserve">
+    <value>プランニング</value>
+  </data>
+  <data name="Label_PlanOverview" xml:space="preserve">
+    <value>プラン概要</value>
+  </data>
+  <data name="Label_Progress" xml:space="preserve">
+    <value>進捗</value>
+  </data>
+  <data name="Label_Ramp" xml:space="preserve">
+    <value>増加率</value>
+  </data>
+  <data name="Label_Repeat" xml:space="preserve">
+    <value>繰り返し</value>
+  </data>
+  <data name="Label_Summary" xml:space="preserve">
+    <value>概要</value>
+  </data>
+  <data name="Label_Tasks" xml:space="preserve">
+    <value>タスク</value>
+  </data>
+  <data name="Label_Template" xml:space="preserve">
+    <value>テンプレート</value>
+  </data>
+  <data name="Label_TrainingLoad" xml:space="preserve">
+    <value>Training Load</value>
+  </data>
+  <data name="Label_Trimp" xml:space="preserve">
+    <value>TRIMP</value>
+  </data>
+  <data name="Label_TSB" xml:space="preserve">
+    <value>TSB</value>
+  </data>
+  <data name="Label_TSS" xml:space="preserve">
+    <value>TSS</value>
+  </data>
+  <data name="Label_WeeklyAvg" xml:space="preserve">
+    <value>週平均</value>
+  </data>
+  <data name="Label_WeekView" xml:space="preserve">
+    <value>週間表示</value>
+  </data>
+  <data name="Label_Workout" xml:space="preserve">
+    <value>ワークアウト</value>
+  </data>
+  <data name="Label_WorkoutLibrary" xml:space="preserve">
+    <value>ワークアウトライブラリ</value>
+  </data>
+  <data name="Text_DeletePhaseWarning" xml:space="preserve">
+    <value>このトレーニング期には{0}個のワークアウトが含まれています。ワークアウトを{1}のトレーニング期に移動しますか？移動しない場合、ワークアウトは削除されます。</value>
+  </data>
+  <data name="Text_DeleteWorkouts" xml:space="preserve">
+    <value>この変更は、トレーニング期を短縮し、{0}個のワークアウトを削除します。ワークアウトを削除して継続しますか？</value>
+  </data>
+  <data name="Text_EvalMessage" xml:space="preserve">
+    <value>{0}個以上のワークアウトを有効化するためにアップグレードします。</value>
+  </data>
+  <data name="Text_PlanHelp" xml:space="preserve">
+    <value>プランは、トレーニング期を含み、トレーニング期はワークアウトを含みます。プランは、保存し、他の人と共有することもできます。</value>
+  </data>
+</root>

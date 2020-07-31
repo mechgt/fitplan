@@ -1,0 +1,523 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Program Files (x86)\Zone Five Software\SportTracks 3\SportTracks.exe</StartProgram>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA4DFB7F-B8FE-4C42-89C1-F0A8E13E5DB9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FitPlan</RootNamespace>
+    <AssemblyName>FitPlan</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>Current</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Debug</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Data, Version=2.0.3170.32799, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Zone Five Software\SportTracks 3\Common.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Common.Visuals, Version=2.0.3170.32804, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Zone Five Software\SportTracks 3\Common.Visuals.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Common.Visuals.Chart, Version=6.0.0.27615, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Zone Five Software\SportTracks 3\Common.Visuals.Chart.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GarminFitnessPublic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\GarminFitnessPublic.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.AccessControl, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b4b8eb9a7afc8328, processorArchitecture=MSIL">
+      <HintPath>Resources\Google.GData.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Calendar, Version=2.1.0.0, Culture=neutral, PublicKeyToken=aa6748391206b888, processorArchitecture=MSIL">
+      <HintPath>Resources\Google.GData.Calendar.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client, Version=2.1.0.0, Culture=neutral, PublicKeyToken=04a59ca9b0273830, processorArchitecture=MSIL">
+      <HintPath>Resources\Google.GData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Extensions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0b4c5df2ebf20876, processorArchitecture=MSIL">
+      <HintPath>Resources\Google.GData.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\ActivityToTemplate.cs" />
+    <Compile Include="Calendar\CalLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendar\CalLogin.Designer.cs">
+      <DependentUpon>CalLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calendar\GoogleOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendar\GoogleOptions.Designer.cs">
+      <DependentUpon>GoogleOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calendar\UserCalendar.cs" />
+    <Compile Include="Calendar\GoogleProvider.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="Controls\AutoExpandTreelist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ButtonTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ButtonTree.Designer.cs">
+      <DependentUpon>ButtonTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatePlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatePlan.Designer.cs">
+      <DependentUpon>CreatePlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DailyLabelProvider.cs">
+    </Compile>
+    <Compile Include="Controls\DailyPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DailyRowRenderer.cs">
+    </Compile>
+    <Compile Include="Controls\MonthCalendar\AlignControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MonthCalendar\AlignEditor.cs" />
+    <Compile Include="Controls\MonthCalendar\DateItem.cs" />
+    <Compile Include="Controls\MonthCalendar\DateItemCollection.cs" />
+    <Compile Include="Controls\MonthCalendar\DateItemCollectionEditor.cs" />
+    <Compile Include="Controls\MonthCalendar\Day.cs" />
+    <Compile Include="Controls\MonthCalendar\Footer.cs" />
+    <Compile Include="Controls\MonthCalendar\GlobalHook.cs" />
+    <Compile Include="Controls\MonthCalendar\Header.cs" />
+    <Compile Include="Controls\MonthCalendar\ImageListPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MonthCalendar\ImageMapEditor.cs" />
+    <Compile Include="Controls\MonthCalendar\Month.cs" />
+    <Compile Include="Controls\MonthCalendar\MonthCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MonthCalendar\NativeMethods.cs" />
+    <Compile Include="Controls\MonthCalendar\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MonthCalendar\SelectedDatesCollection.cs" />
+    <Compile Include="Controls\MonthCalendar\SelectionArea.cs" />
+    <Compile Include="Controls\MonthCalendar\Weekday.cs" />
+    <Compile Include="Controls\MonthCalendar\Weeknumber.cs" />
+    <Compile Include="Controls\SplitButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TabControlBG.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TabControlBG.Designer.cs">
+      <DependentUpon>TabControlBG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WizardBase\Collection\GenericCollection.cs" />
+    <Compile Include="Controls\WizardBase\Collection\WizardStepCollectionEditor.cs" />
+    <Compile Include="Controls\WizardBase\Converters\CustomFileNameEditor.cs" />
+    <Compile Include="Controls\WizardBase\Converters\GenericCollectionConverter.cs" />
+    <Compile Include="Controls\WizardBase\Converters\GenericConverter.cs" />
+    <Compile Include="Controls\WizardBase\Converters\PDesc.cs" />
+    <Compile Include="Controls\WizardBase\Designers\WizardDesigner.cs" />
+    <Compile Include="Controls\WizardBase\Designers\WizardDesignerActionList.cs" />
+    <Compile Include="Controls\WizardBase\Designers\WizardStepDesigner.cs" />
+    <Compile Include="Controls\WizardBase\EventArgs\GenericCancelEventArgs.cs" />
+    <Compile Include="Controls\WizardBase\EventArgs\GenericChangeEventArgs.cs" />
+    <Compile Include="Controls\WizardBase\EventArgs\GenericEventArgs.cs" />
+    <Compile Include="Controls\WizardBase\Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WizardBase\Steps\FinishStep.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\WizardBase\Steps\IntermediateStep.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\WizardBase\Steps\LicenceStep.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\WizardBase\Steps\StartStep.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\WizardBase\Steps\WizardControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\WizardBase\Steps\WizardStep.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\WizardBase\Structures\ColorPair.cs" />
+    <Compile Include="Controls\WizardBase\Structures\TextAppearence.cs" />
+    <Compile Include="Crypto.cs" />
+    <Compile Include="Data\ChartData.cs" />
+    <Compile Include="Data\ChartPointPairList.cs">
+    </Compile>
+    <Compile Include="Data\CustomDataFields.cs" />
+    <Compile Include="Data\GarminFitness\Manager.cs" />
+    <Compile Include="Data\Loaded.cs" />
+    <Compile Include="Data\Shared.cs" />
+    <Compile Include="Data\WorkoutDefinition.cs" />
+    <Compile Include="Data\TrainingLoadPlugin.cs" />
+    <Compile Include="Extend.cs" />
+    <Compile Include="GUIDS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\SportTracks.cs" />
+    <Compile Include="Schedule\Day.cs" />
+    <Compile Include="Schedule\DayCollection.cs" />
+    <Compile Include="Schedule\IWorkoutBase.cs" />
+    <Compile Include="Schedule\TemplateCollection.cs" />
+    <Compile Include="Schedule\IWorkout.cs" />
+    <Compile Include="UI\AddPhase.cs" />
+    <Compile Include="Controls\HiLoSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\HiLoSlider.Designer.cs">
+      <DependentUpon>HiLoSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DailyNode.cs">
+    </Compile>
+    <Compile Include="UI\ColumnDef.cs" />
+    <Compile Include="UI\LibraryColumns.cs">
+    </Compile>
+    <Compile Include="UI\PhaseTreeLabelProvider.cs" />
+    <Compile Include="UI\LibraryNode.cs" />
+    <Compile Include="UI\LibraryLabelProvider.cs" />
+    <Compile Include="UI\LibraryTreeRenderer.cs" />
+    <Compile Include="UI\ImagePopupRenderer.cs" />
+    <Compile Include="UI\GlobalImages.cs" />
+    <Compile Include="UI\ImagePopupLabelProvider.cs" />
+    <Compile Include="UI\MigrationAsst.cs" />
+    <Compile Include="UI\PlanOverviewColumns.cs">
+    </Compile>
+    <Compile Include="UI\TreeNodeCollection.cs" />
+    <Compile Include="Schedule\WorkoutCollection.cs" />
+    <Compile Include="Schedule\DanielsPlan.cs" />
+    <Compile Include="Schedule\Phase.cs" />
+    <Compile Include="Schedule\PhaseCollection.cs" />
+    <Compile Include="Schedule\TrainingPlan.cs" />
+    <Compile Include="Schedule\Workout.cs" />
+    <Compile Include="PluginMain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Images.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\GlobalSettings.cs" />
+    <Compile Include="Settings\LogbookSettings.cs" />
+    <Compile Include="UI\InsertPhase.cs" />
+    <Compile Include="UI\AddWorkout.cs" />
+    <Compile Include="UI\Open.cs" />
+    <Compile Include="UI\Save.cs" />
+    <Compile Include="UI\AddPlan.cs" />
+    <Compile Include="UI\Delete.cs" />
+    <Compile Include="UI\FitPlanNode.cs">
+    </Compile>
+    <Compile Include="UI\PhaseTreeRenderer.cs" />
+    <Compile Include="UI\PlanWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PlanWizard.Designer.cs">
+      <DependentUpon>PlanWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ScheduleView.cs" />
+    <Compile Include="UI\ScheduleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ScheduleControl.Designer.cs">
+      <DependentUpon>ScheduleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Calendar\CalLogin.resx">
+      <DependentUpon>CalLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendar\GoogleOptions.resx">
+      <DependentUpon>GoogleOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonTree.resx">
+      <DependentUpon>ButtonTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CreatePlan.resx">
+      <DependentUpon>CreatePlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DailyPanel.resx">
+      <DependentUpon>DailyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MonthCalendar\AlignControl.resx">
+      <DependentUpon>AlignControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MonthCalendar\ImageListPanel.resx">
+      <DependentUpon>ImageListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MonthCalendar\MonthCalendar.resx">
+      <DependentUpon>MonthCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MonthCalendar\Resource1.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WizardBase\Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>WizardBase.Properties</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.da.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.fi.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.it.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.nl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.no.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.pl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.pt-Br.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.sv.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.zh-CHT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HiLoSlider.resx">
+      <DependentUpon>HiLoSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.zh-TW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.ja.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PlanWizard.resx">
+      <DependentUpon>PlanWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ScheduleControl.resx">
+      <DependentUpon>ScheduleControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Controls\MonthCalendar\MonthCalendar.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\MonthCalendar\Images\prev_month_vs.bmp" />
+    <Content Include="Controls\MonthCalendar\Images\prev_year.bmp" />
+    <Content Include="Controls\MonthCalendar\Images\prev_year_disabled.bmp" />
+    <Content Include="Controls\MonthCalendar\Images\prev_year_vs.bmp" />
+    <Content Include="Controls\MonthCalendar\MonthCalendar.bmp" />
+    <Content Include="Controls\WizardBase\Resources\back.png" />
+    <Content Include="Controls\WizardBase\Resources\icon.png" />
+    <Content Include="Controls\WizardBase\Resources\left.png" />
+    <Content Include="Controls\WizardBase\Resources\Top.png" />
+    <None Include="Resources\GoogleOptionsMain.png" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\sync161.png" />
+    <None Include="Resources\sync16.png" />
+    <None Include="Resources\White-signin_Small_base_20dp.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>REM Set the plugin GUID
+set guid=b11c4fd0-93b2-4435-a5d3-83f0fc98f00b
+
+REM ST version, for plugin.xml file
+SET StVersion=3.1.4320
+SET StPluginPath=%25ALLUSERSPROFILE%25\Application Data\ZoneFiveSoftware\SportTracks\3\Plugins
+
+REM 7-zip must be configured, hardcoded path used
+set ZIPPATH=C:\Program Files\7-Zip
+
+set stPlgFile=$(SolutionDir)$(ProjectName).st3plugin
+REM To move a .st2plugin to common area, create environment variable (or set it below)
+REM set stPlgoutdir=g:\Users\go\dev\web
+
+set StTarget=%25StPluginPath%25\Update\%25guid%25
+IF NOT EXIST %25StTarget%25 mkdir %25StTarget%25
+
+ECHO Generate the plugin.xml file
+ECHO ^&lt;?xml version="1.0" encoding="utf-8" ?^&gt; &gt;  "$(TargetDir)\plugin.xml"
+ECHO ^&lt;plugin id="%25guid%25" minimumCommonVersion="%25StVersion%25" /^&gt; &gt;&gt; "$(TargetDir)\plugin.xml"
+
+REM XCOPY depreciated in Vista, use for XP compatibility
+REM XCOPY  "$(TargetDir)*.*" "%25StTarget%25" /I/Y/Q/E/S
+ECHO xcopy "$(TargetDir)*.dll" "%25StTarget%25" /S /Y
+xcopy "$(TargetDir)*.dll" "%25StTarget%25\" /S /Y
+
+set Release=No
+IF "$(ConfigurationName)"=="Release" set Release=Yes
+
+IF NOT "%25Release%25"=="Yes" GOTO END
+
+IF NOT EXIST "%25ZIPPATH%25\7z.exe" GOTO END
+
+IF EXIST "%25stPlgFile%25" del "%25stPlgFile%25" /Q
+"%25ZIPPATH%25\7z.exe" a -r -tzip "%25stPlgFile%25" "$(TargetDir)*" -x!*.st3plugin -x!*.tmp -x!*.pdb -x!$(ProjectName).xml
+
+IF "%25stPlgoutdir%25"=="" GOTO END
+IF NOT EXIST "%25stPlgoutdir%25" GOTO END
+COPY "%25stPlgFile%25" "%25stPlgoutdir%25"
+
+:END</PostBuildEvent>
+  </PropertyGroup>
+</Project>
